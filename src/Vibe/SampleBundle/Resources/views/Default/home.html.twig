@@ -1,0 +1,21 @@
+{% extends 'VibeSampleBundle::base.html.twig' %}
+
+{% block title %}My cool blog posts{% endblock %}
+
+{% block body %}
+    Hi!
+    <p><img src="{{ asset('bundles/vibesample/images/cat.jpg') }}" alt="Symfony!" /></p>
+    <ul>
+    	<li>{{ "now"|date(null, "Europe/Paris") }}</li>
+    	<li>
+    		{% for i in range(0, 3) %}
+			    {{ i }},
+			{% endfor %}
+    	</li>
+    </ul>
+    
+    {% if app.debug %}
+	    <p>Request method: {{ app.request.method }}</p>
+	    <p>Application Environment: {{ app.environment }}</p>
+	{% endif %}
+{% endblock %}

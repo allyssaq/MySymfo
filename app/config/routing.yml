@@ -1,0 +1,10 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+vibe_sample:
+    resource: "@VibeSampleBundle/Resources/config/routing.yml"
+    prefix:   /apple
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

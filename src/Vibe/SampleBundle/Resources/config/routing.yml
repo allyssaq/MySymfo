@@ -1,0 +1,51 @@
+vibe_sample_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: VibeSampleBundle:Default:index }
+
+display_text:
+    path:	/display/{_locale}
+    defaults: { _controller: VibeSampleBundle:Default:display, _locale: en }
+    requirements:
+        _locale: en|fr
+
+display_arguments:
+    path:	/arguments/{name}
+    defaults: { _controller: VibeSampleBundle:Default:arguments }
+    # requirements:
+    #     name:  \d+
+
+display_fullname:
+    path:	/fullname/{lastname}/{firstname}
+    defaults: { _controller: VibeSampleBundle:Default:fullname}
+
+search:
+    path:	/search
+    defaults: { _controller: VibeSampleBundle:Default:search }
+
+redirecting:
+    path:	/redirecting
+    defaults: { _controller: VibeSampleBundle:Default:redirecting }
+
+rendering:
+    path:	/rendering
+    defaults: { _controller: VibeSampleBundle:Default:rendering }
+
+
+sessions:
+    path:   /sessions
+    defaults: { _controller: VibeSampleBundle:Default:session }
+
+# static:
+#     paths: /static
+#     defaults: 
+#         _controller: FrameworkBundle:Template:template
+#         template: default/home.html.twig
+
+
+welcome:
+    path: /welcome
+    defaults: { _controller: VibeSampleBundle:Default:welcome }
+
+errors:
+    path: /errors
+    defaults: { _controller: VibeSampleBundle:Default:errors }

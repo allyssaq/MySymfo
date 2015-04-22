@@ -1,0 +1,4 @@
+services:
+#    vibe_sample.example:
+#        class: Vibe\SampleBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
